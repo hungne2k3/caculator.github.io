@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May Tinh (Calculator)</title>
+    <link rel="stylesheet" href="./assest/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js">
+    <link rel="stylesheet" href="./fontawesome-free-6.2.1-web/fontawesome-free-6.2.1-web/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="iphone-x">
+            <div class="screen">
+                <div class="notch">
+                    <div class="sound">
+                        <div class="camera">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="time" id="time">
+                    <script>
+                        var time = document.getElementById('time').innerHTML;
+                        var today = new Date();
+
+                        var time  = today.getHours() + ":" + today.getMinutes();
+
+                        time = document.write(time) 
+                    </script>
+                </div>
+
+                <div class="battery">
+                    <i class="fa-solid fa-battery-full"></i>
+                </div>
+
+                <div class="wifi">
+                    <i class="fa-solid fa-wifi"></i>
+                </div>
+
+                <div class="signal">
+                    <i class="fa-solid fa-signal"></i>
+                </div>
+
+                <div class="top-nav">
+
+                </div>
+
+                <form class="calculator container">
+                    <input type="text" placeholder=" " name="displayResult" class="area">
+
+                    <div class="key container" id="keyBoard">
+                        <div class="first-col"></div>
+
+                        <div class="second-col">
+                            <div class="button">
+                                <button type="button" name="" value="AC" class="btn-work"
+                                onclick="displayResult.value = ' ' " id="c">
+                                    AC
+                                </button>
+                            </div>
+                            
+                            <div class="button">
+                                <button type="button" name="" value="7" class="btn-work"
+                                onclick="calcNumbers(this.value)" id="num">
+                                    7
+                                </button>
+                            </div>
+
+                            <div class="button">
+                                <button type="button" name="" value="4" class="btn-work"
+                                onclick="calcNumbers(this.value)" id="num">
+                                    4
+                                </button>
+                            </div>
+
+                            <div class="button">
+                                <button type="button" name="" value="1" class="btn-work"
+                                onclick="calcNumbers(this.value)" id="num">
+                                    1
+                                </button>
+                            </div>
+
+                            <div class="button">
+                                <button type="button" name="" value="0" class="btn-work"
+                                onclick="calcNumbers(this.value)" id="num">
+                                    0
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="third-col">
+                            <div class="button">
+                                <button type="button" name="" value="+/-" class="btn-work"
+                                onclick="makeNegative(displayResult.value)" id="c">
+                                    +/-
+                                </button>
+                            </div>
+                            
+                            <div class="button">
+                                <button type="button" name="" value="8" class="btn-work"
+                                onclick="calcNumbers(this.value)" id="num">
+                                    8
+                                </button>
+                            </div>
+
+                            <div class="button">
+                                <button type="button" name="" value="5" class="btn-work"
+                                onclick="calcNumbers(this.value)" id="num">
+                                    5
+                                </button>
+                            </div>
+
+                            <div class="button">
+                                <button type="button" name="" value="2" class="btn-work"
+                                onclick="calcNumbers(this.value)" id="num">
+                                    2
+                                </button>
+                            </div>
+
+                            <div class="button">
+                                <button type="button" name="" value="." class="btn-work"
+                                onclick="calcNumbers(this.value)" class="btn-work" id="num">
+                                    .
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="fourth-col">
+                            <div class="button">
+                                <button type="button" name="" value="%" class="btn-work"
+                                onclick="calcNumbers(this.value)" id="c">
+                                    <i class="fa-solid fa-percent"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="button">
+                                <button type="button" name="" value="9" class="btn-work"
+                                onclick="calcNumbers(this.value)" id="num">
+                                    9
+                                </button>
+                            </div>
+
+                            <div class="button">
+                                <button type="button" name="" value="6" class="btn-work"
+                                onclick="calcNumbers(this.value)" id="num">
+                                    6
+                                </button>
+                            </div>
+
+                            <div class="button">
+                                <button type="button" name="" value="3" class="btn-work"
+                                onclick="calcNumbers(this.value)" id="num">
+                                    3
+                                </button>
+                            </div>
+
+                            <div class="button">
+                                <button type="button" name="" value="+" class="btn-work"
+                                onclick="calcNumbers(this.value)" id="num">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="fifth-col">
+                            <button type="button" name="" value="/" class="btn-work btn1"
+                                onclick="calcNumbers(this.value)" id="eql">
+                                <i class="fa-solid fa-divide"></i>
+                            </button>
+
+                            <button type="button" name="" value="*" class="btn-work btn2"
+                                onclick="calcNumbers(this.value)" id="eql">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+
+                            <button type="button" name="" value="-" class="btn-work btn3"
+                                onclick="calcNumbers(this.value)" id="eql">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+
+                            <!-- Trong JavaScript, bạn có thể sử dụng phương thức includes()
+                                 để xem liệu một chuỗi có được tìm thấy trong chuỗi khác hay không.
+
+                            Nếu search-string được tìm thấy thì nó sẽ trả về true. Ngược lại,
+                             nêu không được tìm thấy thì nó sẽ trả về false.
+
+                            Phương thức includes() phân biệt chữ hoa chữ thường,
+                             nghĩa là nếu chuỗi tìm kiếm không khớp với cách viết hoa 
+                             chính xác trong str thì nó sẽ trả về false. -->
+                            <button type="button" name="" value="=" class="btn-equal"
+                                onclick="(displayResult.value.includes('%'))?percentage(displayResult.value):displayResult.value = eval(displayResult.value);" 
+                                id="eql">
+                                =
+                            </button>
+                        </div>
+
+                        <div class="menu">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+
+                        <div class="home">
+                            <i class="fa-solid fa-house-user"></i>
+                        </div>
+
+                        <div class="back">
+                            <i class="fa-solid fa-backward"></i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="drak-light">
+        <i class="moon fa-solid fa-moon"></i>
+        <i class="sun fa-sharp fa-solid fa-sun"></i>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

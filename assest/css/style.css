@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root
+{
+    --bodybg:#f8f4f4;
+    --btt:#222222;
+    --tcolor: rgb(119 119 119);
+
+    --BxSi:
+        6px 6px 8px rgba(13, 39, 80, 0.25),
+        -6px -6px 10px #fff,
+        inset -8px -8px 12px rgba(255,255,255,0.7),
+        inset 5px 5px 8px rgba(13,39,80,0.2);
+
+    --PSD-3d:
+        7px 7px 15px #45566754,
+        -8px -8px 15px #5165790a,
+         inset -5px -4px 13px 0px #51657959,
+         inset 6px 7px 12px 0px #fffffff0; 
+
+    --eql-background: 
+    linear-gradient(to bottom right, rgb(211 109 18),rgb(237 157 30));
+    --eql-shadow: 
+    inset 1px 1px 3px rgb(249 133 0),
+    inset 4px 4px 15px rgb(179 83 0),
+    inset -1px -1px 3px rgb(204 99 8),
+    3px 3px 5px rgb(194 199 212);
+
+    --c-background: linear-gradient(to bottom right, rgb(139 148 161),rgb(239 240 247));
+    --c-shadow: 
+    inset 1px 1px 1px rgb(200 206 217), 
+    inset 2px 2px 8px rgb(202 207 214), 
+    inset -2px -2px 3px rgb(180 187 199), 
+    3px 3px 12px rgb(194 199 212);
+
+    --num-background: 
+    linear-gradient(to bottom right, rgb(192 197 209),rgb(237 238 245));
+    --num-shadow: 
+    inset 2px 2px 3px rgb(235 235 243), 
+    inset 4px 4px 15px rgb(202 207 214), 
+    3px 3px 12px rgb(194 199 212);
+
+}
+
+body.dark{
+
+
+    --bodybg:#1e212a;
+    --btt:#fff;
+    --tcolor: rgb(119 119 119);
+
+    --BxSi:6px 6px 8px rgb(0 0 0 / 50%),
+        -6px -6px 10px rgb(255 255 255 / 5%),
+         inset -8px -8px 12px rgb(255 255 255 / 5%),
+          inset 5px 5px 8px rgb(0 0 0 / 50%);
+
+    --PSD-3d:5px 5px 15px
+
+    rgb(0 0 0 / 18%), 5px 15px 15px rgb(0 0 0 / 25%), inset 5px 5px 10px rgb(0 0 0 / 50%), inset 5px 5px 20px rgb(255 255 255 / 20%), inset -5px -5px 15px rgb(0 0 0 / 75%); 
+
+
+        --eql-shadow: inset 1px 1px 2px rgb(249 170 45 / 60%), inset 4px 4px 15px rgb(165 78 4), 3px 3px 5px rgb(24 27 36);
+    --eql-shadow: inset 1px 1px 2px rgb(249 170 45 / 60%), inset 4px 4px 15px rgb(165 78 4), 3px 3px 5px rgb(24 27 36);
+
+    --c-background: linear-gradient(to bottom right, rgb(73 79 92),rgb(111 117 135));
+    --c-shadow: inset 1px 1px 1px rgb(101 107 123), inset 4px 4px 15px rgb(51 57 66), 3px 3px 5px rgb(24 27 36);
+
+    --num-background: linear-gradient(to bottom right, rgb(41 45 56),rgb(60 60 68));
+    --num-shadow: inset 1px 1px 1px rgb(57 60 74), inset 4px 4px 15px rgb(32 35 45), 3px 3px 5px rgb(24 27 36);
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: var(--bodybg);
+}
+
+.iphone-x {
+    margin-top: 50px;
+}
+
+.iphone-x .screen {
+    width: 42%;
+    height: 640px;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 320px;
+    background: var(--bodybg);
+    border-radius: 44px;
+    padding: 10px;
+    box-shadow: var(--PSD-3d);
+}
+
+.screen .notch {
+    width: 152px;
+    height: 30px;
+    /* background: red; */
+    margin: 0 auto;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.sound {
+    top: 10px;
+    left: 42px;
+    width: 40px;
+    height: 6px;
+    position: relative;
+    background: var(--btt);
+    border-radius: 10px;
+}
+
+.camera {
+    top: -2px;
+    left: 50px;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    background: var(--btt);
+    border-radius: 100%;
+}
+
+.fifth-col {
+    display: flex;
+    flex-direction: column;
+    padding: 49px 29px 13px 28px;
+    /* border: 1px solid #000; */
+}
+
+.btn1,
+.btn2,
+.btn3 {
+    margin-bottom: 10px;
+}
+
+/* Color transparence là màu trong suốt,  */
+.time {
+    width: 60px;
+    margin: -22px 0px 0px 20px;
+    /* position: absolute; */
+    font-size: 10px;
+    background: transparent;
+    color: var(--btt);
+}
+
+.battery {
+    margin-top: -15px;
+}
+
+.battery i {
+    color: var(--btt);
+    margin-left: 278px !important;
+}
+
+.wifi {
+    margin-top: -21px !important;
+    
+}
+
+.wifi i {
+    margin-left: 256px;
+    font-size: 12px;
+    color: var(--btt);
+}
+
+.signal {
+    margin-top: -20px !important;
+}
+
+.signal i {
+    font-size: 12px;
+    margin-left: 234px;
+    color: var(--btt);
+}
+
+.top-nav {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    /* Hộp đặt nội dung của nó theo chiều ngang. */
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.area {
+    min-width: 50px !important;
+    width: 94%;
+    min-height: 120px !important;
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 30px !important;
+    text-align: right;
+    overflow: scroll;
+    outline: none;
+    border: none;
+    font-weight: 400;
+    color: var(--btt);
+    background: var(--bodybg);
+    box-shadow: var(--BxSi);
+    border-radius: 10px;
+}
+
+.calculator {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.key {
+    float: left !important;
+    font-size: 15px;
+    display: flex !important;
+    margin: -5px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+.fourth-col,
+.third-col,
+.second-col,
+.first-col{
+    padding: 10px;
+    white-space: wrap;
+    margin: 12.5px;
+    display: inline-block;
+    margin-top: 20px !important;
+    justify-content: space-between;
+}
+
+.button {
+    display: block;
+    padding-left: 10px;
+    min-height: 40px;
+    padding-right: 20px;
+    white-space: wrap;
+    word-wrap: break-word;
+    margin-top: 20px;
+    justify-content: space-between !important;
+}
+
+button {
+    /* border: 1px solid #000; */
+    position: relative;
+    margin-left: -50px;
+    min-width: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0px;
+    color: var(--btt);
+    border-radius: 17px !important;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-weight: 400 !important;
+    font-size: 14pt !important;
+}
+
+.btn-work {
+    color: var(--btt) !important;
+}
+
+.btn-equal {
+    color: var(--btn) !important; 
+    height: 150px !important;
+}
+
+button:focus {
+    cursor: pointer;
+    outline: none !important;
+    border: none !important;
+}
+
+button:active {
+    outline: none !important;
+    border: none !important;
+}
+
+button:hover {
+    color: #d31c1c !important;
+    font-weight: 600 !important;
+}
+
+.btn-work:hover,
+.btn-equal:hover {
+    color: #d01212;
+}
+
+.home {
+    margin-top: 400px;
+    margin-left: 86px;
+    font-size: 30px;
+    cursor: pointer;
+    color:rgb(243, 96, 34);
+}
+
+.menu {
+    margin-top: 400px;
+    margin-left: -279px;
+    font-size: 30px;
+    cursor: pointer;
+    color:rgb(243, 96, 34);
+}
+
+.back {
+     /* margin-bottom: 324px; */
+    margin-top: 401px;
+    margin-left: 74px;
+    font-size: 30px;
+    color: rgb(243, 96, 34);
+}
+
+#eql {
+    background: var(--eql-background);
+    box-shadow: var(--eql-shadow);
+    color: #fff !important;
+}
+
+#c {
+    background: var(--c-background);
+    box-shadow: var(--c-shadow);
+    /* color: #fff !important; */
+}
+
+#num {
+    background: var(--num-background);
+    box-shadow: var(--num-shadow);
+}
+
+.drak-light {
+    position: absolute;
+    display: flex;
+    left: 10%;
+    justify-content: center;
+    align-items: center;
+    top: 5%;
+    width: 60px;
+    height: 60px;
+    background: var(--num-background);
+    box-shadow: var(--num-shadow);
+    border-radius: 50%;
+    text-align: center;
+}
+
+.drak-light i {
+    position: absolute;
+    cursor: pointer;
+    font-size: 25px;
+    transition: all 0.3s ease;
+}
+
+.drak-light i.sun {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.drak-light.active i.sun {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.drak-light.active i.moon {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.fa-sun {
+    color: #ffd900;
+}
+
+.fa-moon {
+    color: #888;
+}
